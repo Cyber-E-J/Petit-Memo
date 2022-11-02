@@ -118,3 +118,43 @@ pip install -r requirements.txt
 
 意思是我已经进入了这个环境之后再通过pip批量安装环境。大概是这样
 
+
+
+
+
+
+
+```
+pip install -e git+git@github.com:CompVis/taming-transformers.git@master#egg=taming-transformers
+```
+
+```
+Could not detect requirement name for 'git+https://gitlab.com/jame/clientapp.git', please specify one with #egg=your_package_name
+```
+
+python的包有以egg命名的，意思是蛇蛋
+
+Python的第一个主流打包格式是.egg文件。
+
+现在大家庭中又有了一个叫做Wheel(*.whl)的新成员。
+
+wheel“被设计成包含PEP 376兼容安装(一种非常接近于磁盘上的格式)的所有文件”。
+
+
+
+
+
+百度源速度飞快
+
+pip install -r requirements.txt -i [https://mirror.baidu.com/pypi/simple](https://links.jianshu.com/go?to=https%3A%2F%2Fmirror.baidu.com%2Fpypi%2Fsimple)
+
+
+
+
+
+
+
+nohup ./run.sh >output.log 2>&1 & 
+
+kill -9 PID
+
