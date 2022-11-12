@@ -146,15 +146,173 @@ wheel“被设计成包含PEP 376兼容安装(一种非常接近于磁盘上的�
 
 百度源速度飞快
 
-pip install -r requirements.txt -i [https://mirror.baidu.com/pypi/simple](https://links.jianshu.com/go?to=https%3A%2F%2Fmirror.baidu.com%2Fpypi%2Fsimple)
+```
+pip install -r requirements.txt -i https://mirror.baidu.com/pypi/simple
+```
 
 
 
-
-
-
-
+```
 nohup ./run.sh >output.log 2>&1 & 
 
+nohup ./finetune.sh >output.log 2>&1 & 
+```
+
+```
 kill -9 PID
+```
+
+
+
+save shell
+
+```
+
+```
+
+
+
+清华大学 ：https://pypi.tuna.tsinghua.edu.cn/simple/
+
+阿里云：http://mirrors.aliyun.com/pypi/simple/
+
+中国科学技术大学 ：http://pypi.mirrors.ustc.edu.cn/simple/
+
+华中科技大学：http://pypi.hustunique.com/
+
+豆瓣源：http://pypi.douban.com/simple/
+
+腾讯源：http://mirrors.cloud.tencent.com/pypi/simple
+
+华为镜像源：https://repo.huaweicloud.com/repository/pypi/simple/
+
+
+
+```
+scp /Users/erlich_jaso/Code/sd-v1-4.ckpt ubuntu@1.116.101.204:/home/ubuntu/ej/stable-diffusion/models/ldm/stable-diffusion-v1
+```
+
+
+
+
+
+```
+ModuleNotFoundError: No module named 'cv2'
+
+python -m pip install -r requirements.txt
+```
+
+
+
+
+
+```
+Loading model from models/ldm/stable-diffusion-v1/model.ckpt
+Global Step: 470000
+LatentDiffusion: Running in eps-prediction mode
+DiffusionWrapper has 859.52 M params.
+making attention of type 'vanilla' with 512 in_channels
+Working with z of shape (1, 4, 32, 32) = 4096 dimensions.
+making attention of type 'vanilla' with 512 in_channels
+Downloading: "https://github.com/DagnyT/hardnet/raw/master/pretrained/train_liberty_with_aug/checkpoint_liberty_with_aug.pth" to /home/ubuntu/.cache/torch/hub/checkpoints/checkpoint_liberty_with_aug.pth
+
+
+```
+
+
+
+```
+Global seed set to 42
+Loading model from models/ldm/stable-diffusion-v1/model.ckpt
+Global Step: 470000
+LatentDiffusion: Running in eps-prediction mode
+DiffusionWrapper has 859.52 M params.
+making attention of type 'vanilla' with 512 in_channels
+Working with z of shape (1, 4, 32, 32) = 4096 dimensions.
+making attention of type 'vanilla' with 512 in_channels
+Downloading: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 961k/961k [00:01<00:00, 820kB/s]
+Downloading: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 525k/525k [00:00<00:00, 637kB/s]
+Downloading: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 389/389 [00:00<00:00, 324kB/s]
+Downloading: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 905/905 [00:00<00:00, 804kB/s]
+Downloading: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 4.52k/4.52k [00:00<00:00, 3.79MB/s]
+Downloading:   2%|█████▍                                                                                                                                                                                                                                             | 38.6M/1.71G [00:12<05:17, 5.27MB/s]
+```
+
+
+
+```
+Your samples are ready and waiting for you here: 
+outputs/txt2img-samples 
+ 
+Enjoy.
+```
+
+
+
+
+
+```
+ python scripts/txt2img.py --prompt "Big Mac, Health Code:: hightly detailed, hyper realistic, photographic, wide angle lens:: in the style of Richard Avedon, Patrick Demarchelier, Vogue, Baron Adolphe De Meyer"  --plms
+```
+
+
+
+
+
+```
+
+python scripts/txt2img.py --prompt "Chang Chen in Peru, vintage, promiscuous, black and white, detailed, intricate ink, illustration, bittersweet, hd, surreal"  --plms
+```
+
+
+
+
+
+```
+python scripts/txt2img.py --prompt "Hangzhou city, modern landscape architectural design for industrialpunk, water in the middle, dramatic lighting and composition, octane render, unreal engine 5, 8k "  --plms --H 512 --W 1536
+```
+
+
+
+```
+
+python scripts/txt2img.py --prompt "synthwave galaxy being eaten by Galactus, HDR, cinematic, ultrawide, realistic, highly detailed "
+
+```
+
+
+
+```
+python scripts/txt2img.py --prompt "hungarian parliament underwater-beach, palm trees behind, aerial shot, real photography, unreal-engine, 4k, highly detailed --wallpaper --uplight" --W 720 --H 1080
+```
+
+
+
+
+
+```
+python scripts/txt2img.py --prompt "Midjourney style| perplexing ominous otherworldly creature emerging from unknown space| Lovecraftian cosmic entities| Cthulhu| horror| vibrant| sharp focus| massive scale| highly detailed| unreal engine| 8k uhd| raytracing| by Ross Tran and Guillermo del Toro" 
+
+
+python scripts/txt2img.py --prompt "the source of future growth dramatic, elaborate emotive Golden Baroque and Rococo styles to emphasise beauty as a transcendental, seamless pattern, symmetrical, large motifs, sistine chapel ceiling, 8k image, supersharp, spirals and swirls in rococo style, cartouches, white smoke and rainbow ink dropping in water, Gold black and rainbow colors, perfect symmetry, 3D, no blur, sharp focus, photorealistic, insanely detailed and intricate, cinematic lighting, Octane render, epic scene, 8K" 
+
+
+
+python scripts/txt2img.py --prompt "Lofi nuclear war to relax and study to" 
+
+python scripts/txt2img.py --prompt "a ultradetailed beautiful panting of a stylish woman sitting on a chair, by conrad roset, greg rutkowski and makoto shinkai, trending on artstation" 
+python scripts/txt2img.py --prompt "detailed portrait of European Pretty Young Girl Storm Rain movie Jacket coat, Futuristic sci-fi fashion, royal attire by ismail inceoglu dragan bibin hans thoma greg rutkowski Alexandros Pyromallis Nekro Rene Margitte illustrated Perfect face, sharp chine, fine details, realistic shaded, fine-face, pretty face cyberpunk, neotokyo, synthwave, aesthetics, futuristic, low-emission-neon, bladerunner movie scene" 
+python scripts/txt2img.py --prompt "Agnes Varda, detailed portrait, Storm Rain movie Jacket coat, Futuristic sci-fi fashion, royal attire by ismail inceoglu dragan bibin hans thoma greg rutkowski Alexandros Pyromallis Nekro Rene Margitte illustrated Perfect face, sharp chine, fine details, realistic shaded, fine-face, pretty face cyberpunk, neotokyo, synthwave, aesthetics, futuristic, low-emission-neon, bladerunner movie scene" 
+
+
+
+((princess_peach)), (anime face), pink dress, blonde hair, female, by Artgerm
+
+python scripts/txt2img.py --prompt "a matte painting of an insanely beautiful female goddess of seduction, sharp focus on eyes, insanely detailed hair, symmetrical, wet luscious lips, few water droplets, intricate details, professionally retouched, elegant, 8k high definition, by artgerm and greg Rutkowski, lighting by albert Bierstadt" 
+
+
+
+
+
+```
 
