@@ -316,3 +316,10 @@ python scripts/txt2img.py --prompt "a matte painting of an insanely beautiful fe
 
 ```
 
+
+
+```
+Command "python setup.py egg_info" failed with error code 1 in /tmp/pip-build-fghkc2to/numpy/
+pip3 install --upgrade pip
+```
+
